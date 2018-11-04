@@ -3,7 +3,6 @@ var $list_selecteds = [];
 var $cards_actives = [];
 
 $(document).ready(function(){
-	$('#section-4').addClass('active');
 	$total_foods = $('#total_foods').val();
 
 	for(var i = 0; i < $total_foods; i++){
@@ -41,6 +40,16 @@ $(document).ready(function(){
 	
 	$('#logout').click(function(){
 		pagination(1);
+	});
+
+	$('.btn-reserve').click(function(){
+		$('.modal').addClass('active-modal');
+		$('.mask').addClass('active-mask');
+	});
+
+	$('.close-modal').click(function(){
+		$('.modal').removeClass('active-modal');
+		$('.mask').removeClass('active-mask');
 	});
 });
 

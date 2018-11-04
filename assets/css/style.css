@@ -57,24 +57,29 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .modal{
+	transition:.3s;
 	position: absolute;
 	background: #FFF;
-	z-index: 99;
+	z-index: -1;
 	padding: 24px;
 	top: 25%;
 	left: 50%;
 	width: 75%;
 	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
 }
 
 .mask{
-	z-index: 98;
+	transition:.3s;
+	z-index: -1;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	top:0;
 	left:0;
-	opacity: 0.7;
+	opacity: 0;
+	visibility: hidden;
 	background: #000;
 }
 
@@ -84,7 +89,6 @@ a:link, a:visited, a:hover, a:active {
 
 .content{
 	padding-top: 90px;
-	display: none !important;
 }
 
 .active{
@@ -374,4 +378,18 @@ label{
 .title-modal{
 	margin-bottom: 15px;
 	font-size: 24px;
+}
+
+.active-modal{
+	transition:.3s;
+	opacity: 1;
+	visibility: visible;
+	z-index:99;
+}
+
+.active-mask{
+	transition:.4s;
+	opacity: 0.7;
+	visibility: visible;
+	z-index:98;
 }

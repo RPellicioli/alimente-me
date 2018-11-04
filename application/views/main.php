@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php $this->load->view('menu'); ?>
 		</header>
 
-		<?php $this->load->view('content'); ?>
+		<?php $this->load->view($content); ?>
 
 		<!-- MODAL -->
 		<div class="modal">
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<input type="text" name="hour" id="hour" class="input" placeholder="Hora: 21:00" />
 
 				<div class="flex justify-center v-center">
-					<button type="button" class="list-button reserve cancel flex v-center">
+					<button type="button" class="list-button close-modal reserve cancel flex v-center">
 						Cancelar
 					</button>
 
