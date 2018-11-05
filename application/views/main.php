@@ -30,17 +30,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 				</li>
 				<li>
-					<a class="close-menu">
-						Item 1
+					<a href="<?php echo base_url() ?>">
+						Inicio
 					</a>
 				</li>
 				<li>
-					<a class="close-menu">
-						Item 2
+					<a href="<?php echo base_url('/lista') ?>">
+						Sua Lista
 					</a>
 				</li>
 				<li>
-					<a id="logout" class="close-menu">
+					<a id="logout">
 						Sair
 					</a>
 				</li>

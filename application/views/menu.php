@@ -4,6 +4,6 @@
 		Alimente-me
 	</a>
 	<div>
-		<img src="assets/img/menu.svg" alt="Icon Menu" id="icon-menu" />
+		<img src="<?php echo base_url('assets/img/menu.svg') ?>" alt="Icon Menu" id="icon-menu" />
 	</div>
 </nav>

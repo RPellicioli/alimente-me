@@ -72,4 +72,17 @@ CREATE TABLE `food_description` (
   CONSTRAINT `food_description_ibfk_3` FOREIGN KEY (`id_food`) REFERENCES `food` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `list`;
+CREATE TABLE `list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_food` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`),
+  KEY `id_food` (`id_food`),
+  CONSTRAINT `list_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `list_ibfk_3` FOREIGN KEY (`id_food`) REFERENCES `food` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 -- 2018-01-08 10:22:22

@@ -24,6 +24,19 @@ class Main extends CI_Controller {
 	}
 
 	public function list(){
-		$this->load->view('main', array('content', 'list'));
+		$this->load->model('list_m');
+		$list = $this->list_m->get(1);
+
+		$this->load->view('main', array('content' => 'list', 'list' => $list));
+	}
+
+	public function details($id){
+		$this->load->model('food_m');
+		$food = $this->food_m->get($id);
+
+		if(count($food) == 0)
+			die(var_dump('Nenhum prato encontrado.'));
+
+		$this->load->view('main', array('content' => 'details', 'food' => $food[0]));
 	}
 }
