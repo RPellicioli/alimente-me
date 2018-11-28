@@ -21,6 +21,9 @@
 			</div>
 		</div>
 	<?php } ?>
+	<div class="empty flex v-center <?php echo $total == 0 ? 'show' : ''; ?>">
+		Nenhum prato encontrado.
+	</div>
 </section>
 
 <script src="<?php echo base_url('assets/js/food.js'); ?>"></script>

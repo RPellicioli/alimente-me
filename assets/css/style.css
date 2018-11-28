@@ -407,3 +407,14 @@ label{
 	fill: #646464;
 	margin-left: 6px;
 }
+
+.empty{
+	display: none;
+	text-align: center;
+	font-size: 25px;
+	height: calc(100vh - 150px);
+}
+
+.show{
+	display: block;
+}
