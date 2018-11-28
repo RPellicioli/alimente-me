@@ -114,6 +114,10 @@ a:link, a:visited, a:hover, a:active {
 	position: relative;
 }
 
+.card-food{
+	display: none;
+}
+
 .card-img{
 	max-height: 250px;
 	width: 100%;
@@ -416,5 +420,5 @@ label{
 }
 
 .show{
-	display: block;
+	display: flex;
 }

@@ -12,16 +12,16 @@
 			</div>
 
 			<div class="box-card-buttons flex justify-center v-center">
-				<button class="card-button">
+				<a href="<?php echo base_url('content') ?>" class="flex v-center justify-center card-button">
 					<img src="<?php echo base_url('assets/img/dislike.svg'); ?>" class="dislike" />
-				</button>
+				</a>
 				<button class="card-button" onclick="selectFood(<?php echo $food->id; ?>, <?php echo $key; ?>)">
 					<img src="<?php echo base_url('assets/img/like.svg'); ?>" class="like" />
 				</button>
 			</div>
 		</div>
 	<?php } ?>
-	<div class="empty flex v-center <?php echo $total == 0 ? 'show' : ''; ?>">
+	<div class="empty v-center <?php echo $total == 0 ? 'show' : ''; ?>">
 		Nenhum prato encontrado.
 	</div>
 </section>
