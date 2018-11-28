@@ -13,7 +13,7 @@ function init_foods(){
 }
 
 function selectFood(id, pos){
-	$.post( "list/insert/"+id, { id_food: id, id_user: 1 });
+	$.post( "http://localhost/alimente-me/list/insert/"+id, { id_food: id, id_user: 1 });
 
 	$cards_actives.splice(pos, 1);
 	randomFood();
