@@ -11,7 +11,11 @@
 		<div class="text-details">
 			<?php echo $food->text ?>
 		</div>
-		<div class="details-buttons flex v-center justify-end">
+		<div class="details-buttons flex v-center justify-between">
+			<div class="rating flex v-center">
+				<?php echo number_format($food->rating, 1, ',', ' '); ?>
+				<img src="<?php echo base_url('assets/img/star.svg'); ?>" class="star" />
+			</div>
 			<button class="list-button reserve flex v-center btn-reserve">
 				Reservar
 			</button>

@@ -13,8 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Alimente-me</title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/flex.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/flex.css'); ?>">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/img/favicon.ico') ?>">
     <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo base_url() ?>">
+					<a href="<?php echo base_url('/content') ?>">
 						Inicio
 					</a>
 				</li>
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 				</li>
 				<li>
-					<a id="logout">
+					<a href="<?php echo base_url() ?>" id="logout">
 						Sair
 					</a>
 				</li>
@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</footer>
 	</main>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="<?php echo base_url('assets/js/script.js') ?>"></script>
+	<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
+	<script src="<?php echo base_url('assets/js/script.js'); ?>"></script>
 </body>
 </html>

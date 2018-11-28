@@ -3,7 +3,7 @@
 		<div class="header-login flex justify-center v-center">
 			LOGIN
 		</div>
-		<form id="form-login" class="flex column justify-start v-start">
+		<form id="form-login" action="http://localhost/alimente-me/login/send" method="POST" class="flex column justify-start v-start">
 			<label>
 				E-mail
 			</label>

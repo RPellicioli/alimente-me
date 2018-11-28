@@ -18,11 +18,14 @@ class Food_m extends CI_Model {
             ->join($this->table_company.' as company', 'company.id'.' = food.id_company', 'inner')
             ->join($this->table_company_description.' as company_description', 'company_description.id_company'.' = company.id', 'inner')
             ->join($this->table_file.' as file_comapany', 'company.id_image'.' = file_comapany.id', 'inner')
-            ->where('food.status', 1)
+            ->where('food.status = 1')
             ->order_by('description.title', 'ASC');
 
         if($id)
             $this->db->where('food.id', $id);
+        else
+            $this->db->where('food.id not in (select id_food from list where id_food = food.id)');
+        
 
         $query = $this->db->get();
         $data = $query->result();

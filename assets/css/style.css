@@ -393,3 +393,17 @@ label{
 	visibility: visible;
 	z-index:98;
 }
+
+.hide {
+	display: none !important;
+}
+
+.rating{
+	font-size: 25px;
+}
+
+.star{
+	width: 18px;
+	fill: #646464;
+	margin-left: 6px;
+}

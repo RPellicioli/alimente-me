@@ -14,12 +14,12 @@
 						</span>
 					</div>
 					<div class="list-buttons flex v-center justify-between">
-						<a href="<?php echo base_url('/detalhes'.'/'.$each->id) ?>" class="list-button details flex v-center">
-							<img src="assets/img/invoice.svg" alt="Detalhes" class="list-details" />
+						<a href="<?php echo base_url('/detalhes'.'/'.$each->id_food) ?>" class="list-button details flex v-center">
+							<img src="<?php echo base_url('assets/img/invoice.svg'); ?>" alt="Detalhes" class="list-details" />
 						</a>
-						<button class="list-button delete flex v-center">
-							<img src="assets/img/close.svg" alt="Deletar" class="list-delete" />
-						</button>
+						<a href="<?php echo base_url('/list/delete/'.$each->id) ?>" class="list-button delete flex v-center">
+							<img src="<?php echo base_url('assets/img/close.svg'); ?>" alt="Deletar" class="list-delete" />
+						</a>
 					</div>
 				</div>
 		<?php

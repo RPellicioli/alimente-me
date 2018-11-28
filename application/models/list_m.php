@@ -10,8 +10,8 @@ class List_m extends CI_Model {
 
     function get($userId){
 
-        $this->db->select('food.id, description.title, company_description.title as company')
-            ->from($this->table)
+        $this->db->select('list.id, food.id as id_food, list.id_user, description.title, company_description.title as company')
+            ->from($this->table.' as list')
             ->join($this->table_food.' as food', 'food.id'.' = list.id_food', 'inner')
             ->join($this->table_food_description.' as description', 'description.id_food'.' = food.id', 'inner')
             ->join($this->table_company.' as company', 'company.id'.' = food.id_company', 'inner')
@@ -23,6 +23,36 @@ class List_m extends CI_Model {
         $data = $query->result();
 
         return $data;
+    }
+
+    public function delete($id = 0)
+    {
+        try {
+            $delete = false;
+            $delete = $this->db->where('id', $id)->delete($this->table);
+
+            return $delete;
+        } catch (Exception $e) {
+            log_message('error', print_r($e, true));
+        }
+    }
+
+    public function insert($data)
+    {
+        $this->db->trans_start();
+
+        $sql = $this->db->insert(
+            $this->table,
+            array(
+                'id_user' => $data['id_user'],
+                'id_food' => $data['id_food']
+            )
+        );
+
+        $id = $this->db->insert_id();
+        $this->db->trans_complete();
+        
+        return $id;
     }
 }
 
